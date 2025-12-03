@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Your Giga Pet</title>
     <meta charset="utf-8">
@@ -15,37 +15,42 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <h1>This is your Giga Pet</h1>
     </header>
 
-    <!-- Main layout -->
     <main class="game-layout">
-
       <!-- Pet image -->
       <section class="pet-image-area">
-        <img class="pet-image" src="Images/IMG_7341.jpeg">
+        <img class="pet-image" src="Images/IMG_7341.jpeg" alt="Your Giga Pet">
       </section>
 
       <!-- Stats + buttons -->
       <section class="dashboard">
-        <div>Name: <strong><span class="name"></span></strong></div>
-        <div>Weight: <strong><span class="weight"></span> ounces</strong></div>
-        <div>Happiness: <strong><span class="happiness"></span>/10</strong></div>
-        <div>Energy: <strong><span class="energy"></span>/10</strong></div>
+        <div class="stat-line">
+          Name: <strong><span class="name"></span></strong>
+        </div>
+        <div class="stat-line">
+          Weight: <span class="weight"></span>
+        </div>
+        <div class="stat-line">
+          Happiness: <span class="happiness"></span>
+        </div>
+        <div class="stat-line">
+          Energy: <span class="energy"></span>
+        </div>
 
         <!-- Pet message -->
         <div id="pet-message" class="pet-message"></div>
 
         <!-- Action buttons -->
         <div class="button-container">
-          <button class="treat-button">Treat</button>
-          <button class="play-button">Play</button>
-          <button class="exercise-button">Exercise</button>
-          <button class="nap-button">Nap</button>
+          <button type="button" class="treat-button">Treat</button>
+          <button type="button" class="play-button">Play</button>
+          <button type="button" class="exercise-button">Exercise</button>
+          <button type="button" class="nap-button">Nap</button>
         </div>
       </section>
-
     </main>
   </body>
 </html>

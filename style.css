@@ -1,77 +1,124 @@
-/* Page background and base text color */
-:root {
-  --soft-white: #eebed7; 
-  --text-color: #19191f;
-}
-
-html, body {
-  height: 100%;
+* {
+  box-sizing: border-box;
   margin: 0;
-  background-color: var(--soft-white);
-  color: var(--text-color);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-/* Main centered layout */
-.game-layout {
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #ffeef5);
+  color: #222;
+  min-height: 100vh;
   display: flex;
-  color:#19191f;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  justify-content: flex-start;
+  padding: 20px;
 }
 
-/* Center pet image */
-.pet-image-area {
+.header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.game-layout {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: stretch;
   justify-content: center;
   width: 100%;
+  max-width: 900px;
 }
 
-/* pet image */
+.pet-image-area {
+  flex: 1 1 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .pet-image {
-  height: 350px;
-  width: auto;
-  border-radius: 10px;
-  border: 10px solid #942a88 ;
+  max-width: 260px;
+  max-height: 260px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* Center stats */
 .dashboard {
-  text-align: center;
-  padding: 10px;
+  flex: 1 1 280px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 20px 24px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-/* Pet message */
+.stat-line {
+  font-size: 1rem;
+}
+
+.stat-line span {
+  font-weight: 600;
+}
+
 .pet-message {
-  margin-top: 10px;
-  font-style: comic sans ms;
-  min-height: 22px;
+  min-height: 32px;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #70306a;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: #fbeaff;
   display: none;
 }
 
-/* Buttons centered */
 .button-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
-/* Button style */
 .button-container button {
-  width: 150px;
-  padding: 8px 4px;
-  font-size: 15px;
-  background-color: #1e2835;
-  color: #fafafa;
-  border: 1px solid #404853;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
   cursor: pointer;
+  background: #f0f1ff;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
 }
 
-/*highlight active button*/
-.button-container button.active-btn {
-  outline: 5px solid #ffd54f;
+.button-container button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.button-container button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.button-container button.active {
+  background: #a98bff;
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .game-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard {
+    width: 100%;
+  }
 }
