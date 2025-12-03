@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+    <!-- Game Script -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>This is your Giga Pet</h1>
+    </header>
+
+    <!-- Main layout -->
+    <main class="game-layout">
+
+      <!-- Pet image -->
+      <section class="pet-image-area">
+        <img class="pet-image" src="images/IMG_7341.jpeg">
+      </section>
+
+      <!-- Stats + buttons -->
+      <section class="dashboard">
+        <div>Name: <strong><span class="name"></span></strong></div>
+        <div>Weight: <strong><span class="weight"></span> ounces</strong></div>
+        <div>Happiness: <strong><span class="happiness"></span>/10</strong></div>
+        <div>Energy: <strong><span class="energy"></span>/10</strong></div>
+
+        <!-- Pet message -->
+        <div id="pet-message" class="pet-message"></div>
+
+        <!-- Action buttons -->
+        <div class="button-container">
+          <button class="treat-button">Treat</button>
+          <button class="play-button">Play</button>
+          <button class="exercise-button">Exercise</button>
+          <button class="nap-button">Nap</button>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

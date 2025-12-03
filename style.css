@@ -1,0 +1,77 @@
+/* Page background and base text color */
+:root {
+  --soft-white: #eebed7; 
+  --text-color: #19191f;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--soft-white);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main centered layout */
+.game-layout {
+  display: flex;
+  color:#19191f;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Center pet image */
+.pet-image-area {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* pet image */
+.pet-image {
+  height: 350px;
+  width: auto;
+  border-radius: 10px;
+  border: 10px solid #942a88 ;
+}
+
+/* Center stats */
+.dashboard {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Pet message */
+.pet-message {
+  margin-top: 10px;
+  font-style: comic sans ms;
+  min-height: 22px;
+  display: none;
+}
+
+/* Buttons centered */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Button style */
+.button-container button {
+  width: 150px;
+  padding: 8px 4px;
+  font-size: 15px;
+  background-color: #1e2835;
+  color: #fafafa;
+  border: 1px solid #404853;
+  cursor: pointer;
+}
+
+/*highlight active button*/
+.button-container button.active-btn {
+  outline: 5px solid #ffd54f;
+}
